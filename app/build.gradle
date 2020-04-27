@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+//FireBase Dependencies
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -42,5 +44,15 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //Trusted Web View dependecies
-    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.1.0'
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:1.2.0'
+
+    //Firebase SDK for google Analytics
+    implementation 'com.google.firebase:firebase-analytics:17.4.0'
+    // add SDKs for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
+
+    // Import the platform
+    implementation platform('com.google.firebase:firebase-bom:25.3.0')
+    implementation 'com.google.guava:guava:28.2-android'
+
 }
